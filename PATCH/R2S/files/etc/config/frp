@@ -25,7 +25,7 @@ config proxy
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
 	option use_compression '1'
-	option remark 'R2S Superr'
+	option remark 'R2S Super'
 	option domain_type 'custom_domains'
 	option custom_domains 'r2ssuper.frp.super27034.top'
 
