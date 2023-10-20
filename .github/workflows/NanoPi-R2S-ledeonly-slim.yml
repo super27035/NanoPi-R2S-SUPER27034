@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: NanoPi-R2S-onlylede-slim
+name: NanoPi-R2S-ledeonly-slim
 
 on: 
   repository_dispatch:
@@ -20,7 +20,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: configs/lean/super.config
-  DIY_SH: scripts/super-lede.sh
+  DIY_SH: scripts/super-ledeonly.sh
   KMODS_IN_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
