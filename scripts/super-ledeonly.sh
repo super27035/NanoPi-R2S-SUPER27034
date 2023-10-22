@@ -13,8 +13,8 @@
 # git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 
 # Clone community packages to package/community
-## mkdir package/community
-## pushd package/community
+mkdir package/community
+pushd package/community
 
 # Add Lienol's Packages
 ## git clone --depth=1 https://github.com/Lienol/openwrt-package
