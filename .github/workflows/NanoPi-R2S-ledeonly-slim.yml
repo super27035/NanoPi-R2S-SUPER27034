@@ -12,10 +12,6 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 5 * * 1' # china time 1pm every Monday
-
-
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
