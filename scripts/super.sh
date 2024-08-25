@@ -51,7 +51,12 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add OpenClash
-svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+# svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+
+# Add OpenClash
+git clone --depth=1 https://github.com/vernesong/OpenClash.git
+rm -rf OpenClash/img
+rm -rf OpenClash/.github
 
 # Add ddnsto & linkease
 svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
