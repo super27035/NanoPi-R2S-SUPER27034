@@ -59,8 +59,13 @@ rm -rf OpenClash/img
 rm -rf OpenClash/.github
 
 # Add ddnsto & linkease
-svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
-svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
+# svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
+# svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
+
+# Add ddnsto & linkease
+git clone --depth=1 --filter=blob:none --sparse https://github.com/linkease/nas-packages-luci.git
+cd nas-packages-luci
+git sparse-checkout set luci/luci-app-linkease
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
