@@ -45,7 +45,7 @@ config proxy
 	option type 'http'
 	option domain_type 'custom_domains'
 	option custom_domains 'synology.frp.super27034.top'
-	option local_ip '192.168.5.245'
+	option local_ip '192.168.5.244'
 	option local_port '5000'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
@@ -56,7 +56,7 @@ config proxy
 config proxy
 	option type 'tcp'
 	option remote_port '6690'
-	option local_ip '192.168.5.245'
+	option local_ip '192.168.5.244'
 	option local_port '6690'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
@@ -67,7 +67,7 @@ config proxy
 config proxy
 	option type 'tcp'
 	option remote_port '5000'
-	option local_ip '192.168.5.245'
+	option local_ip '192.168.5.244'
 	option local_port '5000'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
@@ -80,7 +80,7 @@ config proxy
 	option type 'http'
 	option domain_type 'custom_domains'
 	option custom_domains 'subconverter.frp.super27034.top'
-	option local_ip '192.168.5.245'
+	option local_ip '192.168.5.244'
 	option local_port '2501'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
@@ -89,7 +89,7 @@ config proxy
 
 config proxy
 	option enable '1'
-	option local_ip '192.168.5.245'
+	option local_ip '192.168.5.244'
 	option local_port '25500'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
@@ -103,7 +103,7 @@ config proxy
 	option type 'http'
 	option domain_type 'custom_domains'
 	option custom_domains 'chatgpt.frp.super27034.top'
-	option local_ip '192.168.5.245'
+	option local_ip '192.168.5.244'
 	option local_port '3002'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
