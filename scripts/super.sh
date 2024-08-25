@@ -22,6 +22,7 @@ rm -rf ../../customfeeds/luci/applications/luci-app-kodexplorer
 rm -rf openwrt-package/verysync
 rm -rf openwrt-package/luci-app-verysync
 
+
 # Add luci-app-irqbalance by QiuSimons https://github.com/QiuSimons/OpenWrt-Add
 # svn export https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-irqbalance
 
@@ -93,8 +94,11 @@ rm -rf ../../customfeeds/luci/applications/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
+# Remove old Argon config
+rm -rf ../../customfeeds/luci/applications/luci-app-argon-config
+
 # Add luci-theme
-# git clone https://github.com/DHDAXCW/theme
+git clone https://github.com/DHDAXCW/theme
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
