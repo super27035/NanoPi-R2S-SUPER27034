@@ -32,10 +32,10 @@ git sparse-checkout set luci-app-irqbalance
 
 
 # Add luci-app-passwall
-mkdir passwall passwall2 passwall-packages 
-git clone https://github.com/xiaorouji/openwrt-passwall passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2 passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall-packages
+# mkdir passwall passwall2 passwall-packages 
+# git clone https://github.com/xiaorouji/openwrt-passwall passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall2 passwall2
+# git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall-packages
 
 # git clone https://github.com/xiaorouji/openwrt-passwall
 # git clone -b packages https://github.com/xiaorouji/openwrt-passwall
@@ -57,12 +57,12 @@ git clone --depth=1 https://github.com/super27035/luci-app-vssr
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add OpenClash
-# git clone --depth=1 --filter=blob:none --sparse https://github.com/vernesong/OpenClash.git
-# cd OpenClash
-# git sparse-checkout set luci-app-openclash
+git clone --depth=1 --filter=blob:none --sparse https://github.com/vernesong/OpenClash.git
+cd OpenClash
+git sparse-checkout set luci-app-openclash
 
 # Add OpenClash
-git clone --depth=1 https://github.com/vernesong/OpenClash
+# git clone --depth=1 https://github.com/vernesong/OpenClash
 
 # Add ddnsto & linkease
 # svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
@@ -85,7 +85,7 @@ git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 git clone --depth=1 https://github.com/NateLol/luci-app-oled
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+# git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-dockerman
 rm -rf ../../customfeeds/luci/collections/luci-lib-docker
@@ -98,7 +98,7 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 rm -rf ../../customfeeds/luci/applications/luci-app-argon-config
 
 # Add luci-theme
-git clone https://github.com/DHDAXCW/theme
+# git clone https://github.com/DHDAXCW/theme
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
