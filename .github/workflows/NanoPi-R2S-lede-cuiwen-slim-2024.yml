@@ -12,7 +12,7 @@ on:
   repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * 1' # china time 1pm every Monday
+    - cron: '0 4 5 * *' # 5th every month @4am 
 
 
 env:
