@@ -8,9 +8,10 @@
 
 name: NanoPi-R2S-DHDAXCW-cuiwen-stable-2024
 
-on: 
-  repository_dispatch:
-  workflow_dispatch:
+on:
+  push:
+    branches:
+      - LYNhome
 
   schedule:
     - cron: '10 12 * * 0,' # china time 7:23am in the morning, Houston time.
