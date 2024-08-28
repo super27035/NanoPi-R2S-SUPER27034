@@ -22,10 +22,6 @@ rm -rf ../../customfeeds/luci/applications/luci-app-kodexplorer
 rm -rf openwrt-package/verysync
 rm -rf openwrt-package/luci-app-verysync
 
-
-# Add luci-app-irqbalance by QiuSimons https://github.com/QiuSimons/OpenWrt-Add
-# svn export https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-irqbalance
-
 git clone --depth=1 --filter=blob:none --sparse https://github.com/QiuSimons/OpenWrt-Add.git
 cd OpenWrt-Add
 git sparse-checkout set luci-app-irqbalance
@@ -63,24 +59,11 @@ git sparse-checkout set luci-app-openclash
 # svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
 # svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
 
-# Add ddnsto & linkease
-git clone --depth=1 --filter=blob:none --sparse https://github.com/linkease/nas-packages-luci.git
-cd nas-packages-luci
-git sparse-checkout set luci/luci-app-linkease
-
-git clone --depth=1 --filter=blob:none --sparse https://github.com/linkease/nas-packages.git
-cd nas-packages
-git sparse-checkout set network/services/ddnsto
-
-
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-oled (R2S Only)
 git clone --depth=1 https://github.com/NateLol/luci-app-oled
-
-# Add ServerChan
-# git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-dockerman
 rm -rf ../../customfeeds/luci/collections/luci-lib-docker
@@ -92,32 +75,11 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
-# Add luci-app-smartdns & smartdns
-# svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns
-
-# Add luci-app-services-wolplus
-# svn export https://github.com/msylgj/OpenWrt_luci-app/trunk/luci-app-services-wolplus
-
-# Add apk (Apk Packages Manager)
-# svn export https://github.com/openwrt/packages/trunk/utils/apk
-
 # Add luci-app-poweroff
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
-
-# Add luci-aliyundrive-webdav
-# rm -rf ../../customfeeds/luci/applications/luci-app-aliyundrive-webdav
-# rm -rf ../../customfeeds/packages/multimedia/aliyundrive-webdav
-# svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
-# svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
-# popd
-
-# Add Pandownload
-# pushd package/lean
-# svn export https://github.com/immortalwrt/packages/trunk/net/pandownload-fake-server
-# popd
 
 # Mod zzz-default-settings
 # pushd package/lean/default-settings/files
