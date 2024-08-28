@@ -8,10 +8,9 @@
 
 name: NanoPi-R2S-lede-cuiwen-slim-2024
 
-on:
-  push:
-    branches:
-      - LYNhome
+on: 
+  repository_dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '0 5 * * 1' # china time 1pm every Monday
 
