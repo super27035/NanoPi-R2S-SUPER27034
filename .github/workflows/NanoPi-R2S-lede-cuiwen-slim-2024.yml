@@ -195,7 +195,7 @@ jobs:
         mv openwrt-rockchip-armv8-friendlyarm_nanopi-r2s-squashfs-sysupgrade.img.gz  lede-cuiwen-slim-2024-friendlyarm_nanopi-r2s-squashfs-sysupgrade.img.gz
         popd
         make checksum
-        mv bin/targets/rockchip/armv8/sha256sums bin/targets/rockchip/armv8/ lede-cuiwen-slim-2024-sha256sums
+        mv bin/targets/rockchip/armv8/sha256sums bin/targets/rockchip/armv8/lede-cuiwen-slim-2024-sha256sums
         echo "GENERATE_STATUS=success" >> $GITHUB_OUTPUT
     - name: Generate release tag
       id: tag
