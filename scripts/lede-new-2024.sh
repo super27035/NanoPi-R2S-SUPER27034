@@ -64,7 +64,7 @@ git sparse-checkout set network/services/ddnsto
 
 # 添加新的 Argon 主题及配置
 mkdir luci-theme-argon luci-app-argon-config
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+git clone -b 18.06 https://github.com/super27035/luci-theme-argon luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
 
 # 添加 subconverter
@@ -83,11 +83,6 @@ popd
 
 # 将默认 shell 改为 zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
-
-# 定制化配置
-sed -i "s/'%D %V %C'/'Built by SUPER($(date +%Y.%m.%d))@%D %V'/g" package/base-files/files/etc/openwrt_release
-sed -i "/DISTRIB_REVISION/d" package/base-files/files/etc/openwrt_release
-sed -i "/%D/a\ Built by SUPER($(date +%Y.%m.%d))" package/base-files/files/etc/banner
 
 # 修改默认 IP 地址
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
@@ -108,3 +103,12 @@ sed -i '/^UBOOT_TARGETS := rk3528-evb rk3588-evb/s/^/#/' package/boot/uboot-rk35
 sed -i "s/enabled '0'/enabled '1'/g" feeds/packages/utils/irqbalance/files/irqbalance.config
 wget -P target/linux/rockchip/armv8/base-files/etc/init.d/ https://github.com/friendlyarm/friendlywrt/raw/master-v19.07.1/target/linux/rockchip-rk3328/base-files/etc/init.d/fa-rk3328-pwmfan
 wget -P target/linux/rockchip/armv8/base-files/usr/bin/ https://github.com/friendlyarm/friendlywrt/raw/master-v19.07.1/target/linux/rockchip-rk3328/base-files/usr/bin/start-rk3328-pwm-fan.sh
+
+# Mod zzz-default-settings
+pushd package/lean/default-settings/files
+sed -i '/http/d' zzz-default-settings
+sed -i '/18.06/d' zzz-default-settings
+export orig_version=$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+export date_version=$(date -d "$(rdate -n -4 -p ntp.aliyun.com)" +'%Y-%m-%d')
+sed -i "s/${orig_version}/SUPER-LEDE ${orig_version} (${date_version})/g" zzz-default-settings
+popd
