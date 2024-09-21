@@ -17,6 +17,18 @@ rm -rf ../../customfeeds/luci/applications/luci-app-kodexplorer
 rm -rf openwrt-package/verysync
 rm -rf openwrt-package/luci-app-verysync
 
+# 删除旧的 luci-theme-argon 和 luci-theme-argon-mod 和 luci-app-argon-config
+rm -rf ../../customfeeds/luci/themes/luci-theme-argon-mod
+rm -rf ../../customfeeds/luci/themes/luci-theme-argon
+rm -rf ../../customfeeds/luci/applications/luci-app-argon-config
+
+# 克隆新的 luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon ../../customfeeds/luci/themes/luci-theme-argon
+
+# 克隆新的 luci-app-argon-config
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config ../../customfeeds/luci/applications/luci-app-argon-config
+
+
 # Add luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
 git clone https://github.com/xiaorouji/openwrt-passwall2 passwall2
@@ -43,10 +55,6 @@ git sparse-checkout set luci/luci-app-linkease
 git clone --depth=1 --filter=blob:none --sparse https://github.com/linkease/nas-packages.git
 cd nas-packages
 git sparse-checkout set network/services/ddnsto
-
-# Add luci-theme-argon and luci-app-argon-config
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter

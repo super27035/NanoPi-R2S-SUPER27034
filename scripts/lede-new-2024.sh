@@ -24,6 +24,18 @@ rm -rf ../../customfeeds/luci/applications/luci-app-kodexplorer
 rm -rf openwrt-package/verysync
 rm -rf openwrt-package/luci-app-verysync
 
+# 删除旧的 luci-theme-argon 和 luci-theme-argon-mod
+rm -rf ../../customfeeds/luci/themes/luci-theme-argon-mod
+rm -rf ../../customfeeds/luci/themes/luci-theme-argon
+rm -rf ../../customfeeds/luci/applications/luci-app-argon-config
+
+# 克隆新的 luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon ../../customfeeds/luci/themes/luci-theme-argon
+
+# 克隆新的 luci-app-argon-config
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config ../../customfeeds/luci/applications/luci-app-argon-config
+
+
 # 克隆 OpenWrt-Add 并只检出 luci-app-irqbalance
 git clone --depth=1 --filter=blob:none --sparse https://github.com/QiuSimons/OpenWrt-Add.git
 cd OpenWrt-Add
@@ -63,9 +75,9 @@ cd nas-packages
 git sparse-checkout set network/services/ddnsto
 
 # 添加新的 Argon 主题及配置
-mkdir luci-theme-argon luci-app-argon-config
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
+# mkdir luci-theme-argon luci-app-argon-config
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config luci-app-argon-config
 
 # 添加 subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
