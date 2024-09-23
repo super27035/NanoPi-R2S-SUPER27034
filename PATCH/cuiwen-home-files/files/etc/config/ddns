@@ -1,0 +1,14 @@
+
+config ddns 'global'
+	option ddns_dateformat '%F %R'
+	option ddns_loglines '250'
+	option upd_privateip '0'
+
+config service 'SUPERUS'
+	option service_name 'aliyun.com'
+	option lookup_host 'super27034.top'
+	option domain 'superus.super27034.top'
+	option username 'LTAI4FvBhSd7aHY3KHKeDxGh'
+	option password 'VuWqWY8qG2dgwJA1JDf553OQb16WFB'
+	option enabled '1'
+	option ip_source 'web'
