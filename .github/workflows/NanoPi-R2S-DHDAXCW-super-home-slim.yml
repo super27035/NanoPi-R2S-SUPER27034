@@ -12,8 +12,8 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 1 1 * *' # 1 am every month
+ # schedule:
+ #   - cron: '0 1 1 * *' # 1 am every month
 
 env:
   REPO_URL: https://github.com/DHDAXCW/lede-rockchip
