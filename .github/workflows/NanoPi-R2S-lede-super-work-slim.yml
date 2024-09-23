@@ -12,8 +12,8 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 5 2 * *' # china time 1pm every Monday
+ # schedule:
+ #   - cron: '0 1 1 * *' # 1 am every month
 
 
 env:
