@@ -38,7 +38,8 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config 
 # git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall-packages
 
 # Add luci-app-ssr-plus
-git clone --depth=1 https://github.com/fw876/helloworld
+git clone --depth=1 https://github.com/super27035/helloworld-2
+# git clone --depth=1 https://github.com/fw876/helloworld
 
 # Add luci-app-vssr <M>
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
