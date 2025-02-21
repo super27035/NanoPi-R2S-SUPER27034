@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: R2S-R3S-DHDAXCW-super-home
+name: N-R2S-R3S-DHDAXCW-super-home
 
 on: 
   repository_dispatch:
