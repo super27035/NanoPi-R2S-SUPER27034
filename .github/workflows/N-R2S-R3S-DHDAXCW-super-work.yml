@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: N-R2S-R3S-DHDAXCW-super-home
+name: R2S-R3S-DHDAXCW-super-home
 
 on: 
   repository_dispatch:
@@ -133,7 +133,7 @@ jobs:
   Release:
     needs: Build
     runs-on: ubuntu-22.04
-    if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+    if: ${{ env.UPLOAD_RELEASE == 'true' && !cancelled() }}
     steps:
     - name: Download artifacts
       uses: actions/download-artifact@v3
@@ -155,7 +155,7 @@ jobs:
 
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
+      if: ${{ steps.tag.outputs.status == 'success' && !cancelled() }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -170,7 +170,7 @@ jobs:
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      if: ${{ env.UPLOAD_RELEASE == 'true' && !cancelled() }}
       with:
         keep_latest: 20
         delete_tags: true
